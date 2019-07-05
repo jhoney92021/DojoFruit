@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Store Checkout</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+      <meta charset="UTF-8">
+   </head>
+
+   <body>
+    <div class="container">
+        <div class="header">
+            <h3>Dojo Store</h3>
+            <button>←</button>
+            <button>→</button>
+            <button>x</button>
+            <button>ƒ</button>
+            <input type="text" placeholder="httlp://localhost:5000/play">
+            <input type="text" placeholder="♀">
+        </div><!--header-->
+        <div class="chassis">
+            <h2>Thank you for your order</h2>
+            
+            <form action="/">
+                <p>
+                   We ordered {{amount}} items for you and charged 
+                   your student account on {{datetime}}
+                </p>
+                <table>
+                        <tr> 
+                            <th>Fruit Name</th>
+                            <th>Quantity</th>
+                        </tr>
+                        <tr>
+                            <td>Strawberry</td>
+                            <td>{{Strawberry}}</td>
+                        </tr>
+                        <tr>
+                            <td>Raspberry</td>
+                            <td>{{Raspberry}}</td>
+                        </tr>
+                        <tr>
+                            <td>Apple</td>
+                            <td>{{Apple}}</td>
+                        </tr>                    
+                    </table>
+                    <h5><u>Your Information</u></h5>
+                    <span class="checkoutbottomInput">Name: {{name}}</span>
+                    <span class="checkoutbottomInput">Your Student ID: {{student}}</span>  
+
+                    
+                <input type="submit" value="Go Back" id="submit">
+            </form>
+            
+
+        </div><!--chassis-->
+        <h4>//</h4>
+   
+    </div><!--container-->
+
+   </body>
+</html>
